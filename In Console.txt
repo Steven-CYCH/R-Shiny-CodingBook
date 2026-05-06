@@ -1,0 +1,4 @@
+shinylive::export(
+     appdir = "C:\\Users\\15334\\Desktop\\Module\\R Shiny 工具庫\\CodingBook產生器/CodeBook_App",  # 來源：只抓這個資料夾
+     destdir = "C:\\Users\\15334\\Desktop\\Module\\R Shiny 工具庫\\CodingBook產生器/site"          # 目的地：丟到外面另一個資料夾
+)

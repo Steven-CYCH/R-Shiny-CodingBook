@@ -1,0 +1,1 @@
+"C:\Program Files\R\R-4.4.1\bin\Rscript.exe" -e "shiny::runApp('app.R', launch.browser=TRUE)"
