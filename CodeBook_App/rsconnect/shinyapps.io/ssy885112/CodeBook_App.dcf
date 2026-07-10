@@ -1,0 +1,13 @@
+name: CodeBook_App
+title: CodeBook_App
+username: ssy885112
+account: ssy885112
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17495281
+bundleId: 12112394
+url: https://ssy885112.shinyapps.io/CodeBook_App/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: run.bat

@@ -39,6 +39,7 @@ ui <- fluidPage(
                tags$label("快速模組"),
                actionButton("btn_01_no_yes", "0 = 無，1 = 有", class = "btn-info btn-sm", style="width:100%; margin-bottom:5px; text-align: center;"),
                actionButton("btn_sex", "0 = 女，1 = 男", class = "btn-info btn-sm", style="width:100%; margin-bottom:5px; text-align: center;"),
+               actionButton("btn_agr", "1 = 非常不同意，2 = 不同意，3 = 普通，4 = 同意，5 = 非常同意", class = "btn-info btn-sm", style="width:100%; margin-bottom:5px; text-align: center;"),
                actionButton("btn_clear", "❌ 清空", class = "btn-default btn-sm", style="width:100%; margin-top:5px;")
         ),
         column(9, rHandsontableOutput("hot_input"))
@@ -145,6 +146,10 @@ server <- function(input, output, session) {
   })
   observeEvent(input$btn_sex, {
     values$hot_data <- data.frame(數值 = c("0", "1"), 說明 = c("女", "男"), stringsAsFactors = FALSE)
+    updateSelectInput(session, "var_type", selected = "NOMINAL")
+  })
+  observeEvent(input$btn_agr, {
+    values$hot_data <- data.frame(數值 = c("1", "2", "3", "4", "5"), 說明 = c("非常不同意", "不同意", "普通", "同意", "非常同意"), stringsAsFactors = FALSE)
     updateSelectInput(session, "var_type", selected = "NOMINAL")
   })
   observeEvent(input$btn_clear, { reset_inputs() })
